@@ -1,0 +1,19 @@
+Big-O notation describes how quickly runtime will grow relative to the input as the input gets arbitrarily large
+
+Important:
+ - We compare how quicly runtime grows, not the exact runtimes since that can vary depending on hardware.
+ - We want to compare a variety of input sizes, we are only concerned with runtime grow relative to the input.
+    This is why we use n for notation
+ - As n gets arbitrarily large we only worry about terms that will grow the fastest as n gets large (asymptotic analysis)
+
+Big-O   / Name
+------------------------
+1       / Constant
+log(n)  / Logarithmic
+n       / Linear
+nlog(n) / Log Linear (Quasilinear)
+n^2     / Quadratic
+n^3     / Cubic
+2^n     / Exponential
+n!      / Factorial
+

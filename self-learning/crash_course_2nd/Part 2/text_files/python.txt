@@ -1,0 +1,4 @@
+Python is all about indentation
+With python you can import other modules
+OOP is possible with python
+Python is very intuitive and easy to read

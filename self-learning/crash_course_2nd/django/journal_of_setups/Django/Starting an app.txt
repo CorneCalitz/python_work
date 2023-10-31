@@ -1,0 +1,62 @@
+A django project is roganized as a group of individual apps that work together to make a project work as a whole.
+
+# 	python manage.py startapp learning_logs
+
+The startapp appname command tells Django to create the infrastructure needed to build an app. 
+	models.py
+	admin.py
+	views.py
+
+Open the file models.py and look at its existing content
+A model tells Django how to work with data that will be stored in the app.
+A model is just like any other class
+
+#
+from django.db import models
+class Topic(models.Model):
+"""A topic the user is learning about."""
+ 	text = models.CharField(max_length=200)
+	 date_added = models.DateTimeField(auto_now_add=True)
+def __str__(self):
+"""Return a string representation of the model."""
+	return self.text
+#
+
+To activate our models we have to tell Django to include our app in the overall project
+Open settings.py and navigate to the installed apps list. 
+Add your app first to in case you want to override the behaviour of the default apps that follow.
+
+#
+INSTALLED_APPS = [
+    # My apps
+    'learning_logs',
+
+    # Django default apps
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+#
+
+The next step is to modify the database so it can store information related to the model Topic.
+From the terminal run the following command:
+
+#	python manage.py makemigrations learning_logs
+
+This command makemigrations tells Django to figure out how to modify the database so it can store the data associated with any new models we've defined. A new migration file called 0001_initial.py was created.
+Now we have to apply this migration and have Django modify the database for us:
+
+# python manage.py migrate
+
+Whenever we want to modify the data the Learning Log manages, we follow these 3 steps:
+	- modify models.py
+	- makemigrations on learning_logs
+	- migrate the project
+
+
+
+
+

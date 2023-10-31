@@ -1,0 +1,28 @@
+Create a file directory
+In that file directory in the command line use the following command to create a virtual env
+ #	python -m venv ll_env
+
+To activate the virtual env we need to run the following command on Windows
+#	ll_env\Scripts\activate
+
+Packages can now be installed on the virtual env
+# 	pip install django
+
+The process for creating a project in django looks like this
+#	django-admin startproject learning_log .
+Take note of the full stop at the end. This is needs to be present.
+By using dir you will see the current files exist
+	settings.py - controls how Django interacts with system
+	urls.py - which pages to build in browser requests
+	wsgi.py - helps Django serve the files it creates. Web server gateway interface
+
+Django needs a database to store its information; thus, we will create one. 
+#	python manage.py migrate
+
+We can view the project in its current state by running the server
+# 	python manage.py runserver
+
+
+
+
+

@@ -1,0 +1,26 @@
+Django allows you to create a superuser, user with all the privileges available on the  site.
+
+"A user’s privileges control the actions that user can take. The most restrictive privilege settings allow a user to only read public information on the site. Registered users typically have the privilege of reading their own private data and some selected information available only to members. To effectively administer a web application, the site owner usually needs access to all information stored on the site. A good administrator is careful with their users’ sensitive information, because users put a lot of trust into the apps they access."
+
+Create a superuser in Django by entering the following into the command line:
+
+# 	python manage.py createsuperuser
+
+username: ll_admin
+email address : <blank>
+password: 12345678
+
+Django stores the password as a hash-value
+
+When we started the learning_logs app, Django created an admin.py file in the same directory as models.py. Open this admin.py file
+
+To register Topic with the admin site, enter the following:
+
+#
+from django.contrib import admin
+from .models import Topic
+admin.site.register(Topic)
+#
+The dot in front of the models tells Python to look for models.py in the same directory as admin.py
+The second line of code tells Django to manage our model though the admin site
+
