@@ -84,7 +84,7 @@ In the case of no matches, every element must be checked, which results in a wor
 """
 
 """
-Space complexity is concerned with how much memory/space an algorithm uses. The notation remains exactly the same.
+SPACE COMPLEXITY is concerned with how much memory/space an algorithm uses. The notation remains exactly the same.
 """
 
 
